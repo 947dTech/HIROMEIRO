@@ -8,8 +8,9 @@
 
 ## HIROMEIROについて
 
-HIROMEIROは、スマートフォンアプリ(mediapipe/holistictrackinggpuを改造したもの)を用いて、
+HIROMEIROは、お手持ちのVRMファイルを使用して、
 トラッキングデバイスを用いることなくフルトラッキングを行うことができるソフトウェアです。
+AndroidスマートフォンアプリとPCアプリの連携により動作します。
 
 HIROMEIROの読みは「ひろめいろ」です。アクセントは平板です。
 
@@ -24,7 +25,10 @@ Windows PCとAndroidスマートフォンが必要です。
     - NVidia Quadro T2000
 - Sony Xperia 1 IV
 
-また、Google Pixel 5での動作を確認しています。
+Androidスマートフォンは以下の機種で動作確認済みです。
+
+- Sony Xperia 1 IV
+- Google Pixel 5
 
 ソフトウェアの動作にはゲームパッドの利用を推奨します。
 
