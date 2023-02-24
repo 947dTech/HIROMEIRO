@@ -40,7 +40,10 @@ Androidスマートフォンは以下の機種で動作確認済みです。
 
 ### ダウンロード
 
-releaseから最新のzipファイルを入手し、解凍してください。
+releasesから最新のzipファイルを入手し、解凍してください。
+
+https://github.com/947dTech/HIROMEIRO/releases
+
 
 ### 本体ソフトウェアのインストール
 

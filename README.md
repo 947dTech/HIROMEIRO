@@ -16,6 +16,18 @@ HIROMEIROの読みは「ひろめいろ」です。アクセントは平板で�
 - WindowsPC(グラフィックボードを搭載したものを推奨します)
 - Androidスマートフォン
 
+### ダウンロード方法
+
+以下のリンクから最新のzipをダウンロードしてください。
+
+https://github.com/947dTech/HIROMEIRO/releases
+
+### 取扱説明書について
+
+[index.md](index.md)
+を参照してください。
+
+
 ## 使用ライブラリについて
 
 - UnrealEngineを使用しています。
@@ -30,12 +42,6 @@ HIROMEIROの読みは「ひろめいろ」です。アクセントは平板で�
 - VRMファイル読み込みにはVRM4Uを用いています。
     - MITライセンス(未改変)
 - VRoidStudioで出力したVRMファイルを用いてテストしています。
-
-
-## 取扱説明書について
-
-[index.md](index.md)
-を参照してください。
 
 
 ## FAQ
