@@ -22,7 +22,8 @@ HIROMEIROの読みは「ひろめいろ」です。アクセントは平板で�
 
 ### 動作環境
 
-Windows PCとAndroidスマートフォンが必要です。
+本体ソフトウェアにはWindows PCが必要です。
+トラッキングソフトウェアにはAndroidもしくはPythonが動作するPC環境が必要です。
 
 弊社テスト環境は以下です。
 - デスクトップPC
@@ -30,12 +31,12 @@ Windows PCとAndroidスマートフォンが必要です。
     - AMD Ryzen 7 5700X
     - 32GBメモリ
     - NVidia GeForce RTX 4060 Ti (16GB)
-- Sony Xperia 1 IV
-
-Androidスマートフォンは以下の機種で動作確認済みです。
-
-- Sony Xperia 1 IV
-- Google Pixel 5
+- Androidスマートフォン
+  - Sony Xperia 1 IV
+  - Samsung Galaxy S26
+- Python用トラッキングソフトウェア
+  - Ubuntu 24.04
+  - Logicool C920n
 
 ソフトウェアの動作にはゲームパッドの利用を推奨します。
 
@@ -43,19 +44,20 @@ Androidスマートフォンは以下の機種で動作確認済みです。
 機種にもよりますが、おおよそ2m x 2m程度の広さを確保してください。
 
 
-## インストール方法
+## 本体ソフトウェアのインストール
 
-### ダウンロード
-
+インストールは不要です。
 releasesから最新のzipファイルを入手し、解凍してください。
 
 https://github.com/947dTech/HIROMEIRO/releases
 
+## トラッキングソフトウェアのインストール
 
-### 本体ソフトウェアのインストール
+以下のいずれかのソフトウェアを準備してください。
 
-インストールは不要です。
-
+- Android apk (mediapipe/holistictrackinggpu) (同梱)
+- 新Android apk (HolisticTransciever)
+- Python用プログラム (mediapipe_python_transceiver)
 
 ### Android apk (mediapipe/holistictrackinggpu) のインストール
 
@@ -103,6 +105,22 @@ $ bazelisk build -c opt --config=android_arm64 --linkopt="-s" mediapipe/examples
 $ adb install bazel-bin/mediapipe/examples/android/src/java/com/google/mediapipe/apps/holistictrackinggpu/holistictrackinggpu.apk
 ```
 
+### 新Android apk (HolisticTransciever)のビルドとインストール
+
+**2026/9/4現在、顔が隠れるとトラッキングが止まるというmediapipe側の挙動を確認しています。ご了承の上使用してください。**
+
+以下のリポジトリのソースコードからビルドしてください。
+
+https://github.com/947dTech/HolisticTransceiver
+
+### Python用プログラム (mediapipe_python_transceiver)
+
+python及びuvが動作するPCにおいて実行して下さい。
+
+以下のリポジトリからソースコードを取得してください。
+
+https://github.com/947dTech/mediapipe_python_transceiver
+
 
 ## 実行方法
 
@@ -115,7 +133,12 @@ PCとAndroid端末が同じネットワークに存在することを確認し�
 コントロールパネル->ネットワーク接続->接続しているデバイス->詳細->IPv4アドレス
 
 
-### holistictrackinggpu (Android)
+### トラッキング用ソフトウェア
+
+共通項目として、送信先IPアドレスを入力する箇所があるので
+PC側のアドレスを入力して下さい。
+
+#### holistictrackinggpu (Android)
 
 実行し、画面に映像がうつること、人物の骨格構造が認識されることを確認してください。
 環境によっては起動に時間がかかることがあります。
@@ -125,6 +148,25 @@ PCとAndroid端末が同じネットワークに存在することを確認し�
 
 スマホの向きをスマホ本体のセンサで認識しているため、
 カメラは縦位置でも横位置でも動作します。
+
+#### HolisticTransceiver (Android)
+
+実行し、画面に映像がうつること、人物の骨格構造が認識されることを確認してください。
+右上のボタンでカメラを切り替えることができます。
+
+実行できたら、左上の歯車アイコンから設定を開き、
+先程のIPアドレスを入力します。
+
+スマホの向きをスマホ本体のセンサで認識しているため、
+カメラは縦位置でも横位置でも動作します。
+
+#### mediapipe_python_transceiver
+
+オプション`--host`で先程のIPアドレスを入力します。
+
+カメラの向きは自分で与える必要があります。
+`--gravity`で向きを与えてください。
+詳細はソフトウェア側のマニュアルを参照してください。
 
 
 ### HIROMEIRO (本体ソフトウェア)
