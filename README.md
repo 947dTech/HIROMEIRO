@@ -21,6 +21,7 @@ HIROMEIROの読みは「ひろめいろ」です。アクセントは平板で�
 
 - WindowsPC(本体ソフトウェア用、グラフィックボードを搭載したものを推奨します)
 - トラッキング用ソフトウェアを動作させるため、以下のいずれか
+  - WindowsPC(本体用と同じPCで動作可能です)
   - Androidスマートフォン(Snapdragon 8もしくは同等の処理性能)
   - Pythonが動作するPC(Ubuntu Linux 24.04で動作確認済み)
 
@@ -32,16 +33,16 @@ https://github.com/947dTech/HIROMEIRO/releases
 
 ### 取扱説明書について
 
-[index.md](index.md)
-を参照してください。
-
+同梱のHTMLを参照してください。
+ソースコードはdocsの下にあります。
 
 ## 使用ライブラリについて
 
 - UnrealEngineを使用しています。
 - 動作解析にはmediapipeを用いています。
-    - Apache2.0ライセンス(改変あり、githubで公開しています。)
-    - https://github.com/947dTech/mediapipe
+    - Apache2.0ライセンス
+        - 旧Android版は改変あり、githubで公開しています。
+        - https://github.com/947dTech/mediapipe
 - 認識結果->関節角度変換はオープンソースで公開しています。
     - Apache2.0ライセンス
     - https://github.com/947dTech/mediapipe_receiver_cpp
@@ -81,6 +82,5 @@ Unreal Engine関連のコードのライセンス上、完全にオープンに�
 
 ### 動かない・機能を追加してほしい
 
-*2026/9/7現在RC版として提供しています。*
 もし不具合やリクエストがある場合は本リポジトリのissueにお願いします。
 ただし必ず対応できることを保証するものでありません。
