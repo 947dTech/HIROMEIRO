@@ -7,7 +7,7 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'HIROMEIRO_document'
-copyright = '2026, Hiroaki Yaguchi'
+copyright = '2026, Hiroaki Yaguchi, 947D-Tech. Co. LTD.'
 author = 'Hiroaki Yaguchi'
 
 # -- General configuration ---------------------------------------------------

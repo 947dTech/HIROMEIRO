@@ -15,3 +15,4 @@ HIROMEIRO取扱説明書
    quickstart
    tracking
    recording
+   faq
